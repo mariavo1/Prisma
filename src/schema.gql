@@ -1,0 +1,15 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type GymEntity {
+  id: Int!
+  name: String!
+  address: String!
+  privateOwned: Boolean!
+  owner: String!
+}
+
+type Query {
+  getAllGyms: [GymEntity!]!
+}
