@@ -12,7 +12,7 @@ export class GymEntity {
     address: string;
 
     @Field(() => Boolean)
-    privateGym: boolean;
+    privateOwned: boolean;
 
     @Field(() => String)
     owner: string;
