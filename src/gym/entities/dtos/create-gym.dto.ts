@@ -1,16 +1,7 @@
-import { Field, InputType } from "@nestjs/graphql";
+import { InputType, OmitType } from "@nestjs/graphql";
+import { GymEntity } from "../gym.entity";
 
 @InputType()
-export class CreateGymDto {
-    @Field(() => String)
-    name: string;
+export class CreateGymDto extends OmitType(GymEntity, ['id'], InputType) {
 
-    @Field(() => String)
-    address: string;
-
-    @Field(() => Boolean)
-    privateOwned: boolean;
-
-    @Field(() => String)
-    owner: string;
 }
